@@ -27,7 +27,7 @@ public class Utility {
 		return false;
 	}
 	
-	public synchronized static boolean handleCityResponse(CoolWeatherDB coolWeatherDB, String response, int provinceId) {
+	public static boolean handleCityResponse(CoolWeatherDB coolWeatherDB, String response, int provinceId) {
 		if(!TextUtils.isEmpty(response)) {
 			String[] allCities = response.split(",");
 			if( allCities != null  &&  allCities.length > 0) {
@@ -46,7 +46,7 @@ public class Utility {
 		return false;
 	}
 	
-	public synchronized static boolean handleCountyResponse(CoolWeatherDB coolWeatherDB, String response, int cityId) {
+	public static boolean handleCountyResponse(CoolWeatherDB coolWeatherDB, String response, int cityId) {
 		if(!TextUtils.isEmpty(response)) {
 			String[] allCounties = response.split(",");
 			if( allCounties != null  &&  allCounties.length > 0) {
