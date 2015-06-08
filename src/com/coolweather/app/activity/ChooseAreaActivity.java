@@ -68,7 +68,7 @@ public class ChooseAreaActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		isFromWeatherActivity = getIntent().getBooleanExtra("from_weather-activity", false);
+		isFromWeatherActivity = getIntent().getBooleanExtra("from_weather_activity", false);	//检查是否是从WeatherActivity跳转过来的
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		//已经选择了城市且不是从WeatherActivity跳转过来，才会直接跳转到WeatherActivity
 		if(prefs.getBoolean("city_selected", false) && !isFromWeatherActivity) {
@@ -228,7 +228,7 @@ public class ChooseAreaActivity extends Activity {
 	
 	//关闭进度对话框
 	private void closeProgressDialog() {
-		if(progressDialog == null) {
+		if(progressDialog != null) {
 			progressDialog.dismiss();
 		}
 	}

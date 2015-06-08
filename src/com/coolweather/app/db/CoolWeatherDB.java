@@ -106,7 +106,7 @@ public class CoolWeatherDB {	//通过将该类的构造方法私有化，兵提供一个getInstance
 	//从数据库中读取某市所有的县城信息
 	public List<County> loadCounties(int cityId) {
 		List<County> list = new ArrayList<County>();
-		Cursor cursor = db.query("County", null, "city_id", new String[] {String.valueOf(cityId)}, null, null, null);
+		Cursor cursor = db.query("County", null, "city_id=?", new String[] {String.valueOf(cityId)}, null, null, null);
 		if(cursor.moveToFirst()) {
 			do{
 				County county = new County();
