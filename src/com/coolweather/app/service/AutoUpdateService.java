@@ -29,6 +29,7 @@ public class AutoUpdateService extends Service {
 				updateWeather();
 			}
 		}).start();
+		
 		AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
 		int anHour = 8 * 60 * 60 * 1000; //8个小时的毫秒数
 		long triggerAtTime = SystemClock.elapsedRealtime() + anHour;

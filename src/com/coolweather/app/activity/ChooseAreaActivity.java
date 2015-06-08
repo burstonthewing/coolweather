@@ -161,9 +161,9 @@ public class ChooseAreaActivity extends Activity {
 	private void queryFromServer(final String code, final String type) {
 		String address;
 		if(!TextUtils.isEmpty(code)) {
-			address = "http://www.weather.com.cn/data/list3/city" + code + ".xml";
+			address = "http://www.weather.com.cn/data/list3/city" + code + ".xml";	//获取市或县（根据code区分）列表的网址
 		} else {
-			address = "http://www.weather.com.cn/data/list3/city.xml";
+			address = "http://www.weather.com.cn/data/list3/city.xml";	//获取省列表的网址
 		}
 		showProgressDialog();
 		HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {

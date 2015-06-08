@@ -76,7 +76,7 @@ public class Utility {
 	}
 	
 	
-	//解析服务器返回的JSON数据，并将解析的数据存储至本地
+	//解析服务器返回的JSON数据，并将解析的数据存储至本地SharedPreferences文件中
 	public static void handleWeatherResponse(Context context, String response) {
 		try {
 			JSONObject jsonObject = new JSONObject(response);
